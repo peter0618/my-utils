@@ -23,4 +23,14 @@ export class StringUtil {
     }
     return phone.substr(0, 3) + maskString + phone.substr(7);
   }
+
+  /**
+   * 문자열에서 특정 문자를 제거해주는 함수입니다.
+   * @param plainText
+   * @param char
+   */
+  static trim(plainText: string, char: string){
+    const regExp = new RegExp(`${char}`,'g');
+    return plainText.replace(regExp, '');
+  }
 }
